@@ -82,7 +82,7 @@ async def main():
         status = ag["status"]
         result = r.get("status", "N/A")
         risk   = r.get("riskScore", "N/A")
-        icon   = "✅" if result == "PASS" else "❌" if result == "FAIL" else "⚠️ " if result in ("WARNING","REVIEW") else "💥"
+        icon   = "" if result == "PASS" else "" if result == "FAIL" else " " if result in ("WARNING","REVIEW") else ""
         print(f"  {icon} {name:<36} {status:<12} {result:<10} {risk}")
 
     # ────────────────────────────────────────────────────────
@@ -180,19 +180,19 @@ async def main():
         print(f"       Trigger: \"{h['feedback']}\"")
 
     # ────────────────────────────────────────────────────────
-    sep("ALL TESTS PASSED ✅")
+    sep("ALL TESTS PASSED ")
     # ────────────────────────────────────────────────────────
 
     print(f"""
   Summary:
-  ✅  16 agents executed in parallel using asyncio.gather
-  ✅  Smart report with risk scores, flags, recommendation
-  ✅  Feedback parsed and routed to correct agents
-  ✅  Selective re-execution — only 2 agents re-ran
-  ✅  14 agents preserved as CACHED
-  ✅  CACHED vs FRESH indicators in report
-  ✅  Full audit trail with timestamps
-  ✅  Version history with snapshots
+  16 agents executed in parallel using asyncio.gather
+  Smart report with risk scores, flags, recommendation
+  Feedback parsed and routed to correct agents
+  Selective re-execution — only 2 agents re-ran
+  14 agents preserved as CACHED
+  CACHED vs FRESH indicators in report
+  Full audit trail with timestamps
+  Version history with snapshots
 """)
 
 

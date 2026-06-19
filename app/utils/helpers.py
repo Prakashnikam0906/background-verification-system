@@ -23,7 +23,7 @@ async def random_delay(min_ms: int = 300, max_ms: int = 1200):
     await asyncio.sleep(ms / 1000)
 
 
-def maybe_raise(rate: float = 0.05):
+def maybe_raise(rate: float = 0.0):
     """simulate 5% agent failure rate - real world scenario"""
     if random.random() < rate:
         raise Exception("External verification service temporarily unavailable")

@@ -124,10 +124,10 @@ cp .env.example .env
 Edit `.env`:
 
 ```env
-ULTRASAFE_API_KEY=akmateiy-d219a1f5-f2678c0d-087ea8bb
+ULTRASAFE_API_KEY=your_api_key_here
 ULTRASAFE_BASE_URL=https://api.ultrasafe.ai/v1
 ULTRASAFE_MODEL=gpt-4o
-USE_REAL_API=true    # set false for mock simulation
+USE_REAL_API=false
 ```
 
 ### 3. Run the server
